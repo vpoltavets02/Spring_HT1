@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Result of searching</title>
+    <style>
+        table {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table border=1 width=50% height=50%>
+    <thead>
+    <tr>
+        <th>Flat ID</th>
+        <th>Region</th>
+        <th>Address</th>
+        <th>Area</th>
+        <th>Rooms amount</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="flat: ${flatList}">
+        <td><p th:text="${flat.id}"></p></td>
+        <td><p th:text="${flat.region}"></p></td>
+        <td><p th:text="${flat.address}"></p></td>
+        <td><p th:text="${flat.area}"></p></td>
+        <td><p th:text="${flat.noRooms}"></p></td>
+        <td><p th:text="${flat.price}"></p></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
